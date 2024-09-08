@@ -118,7 +118,7 @@
 
     - name: Create new nat gateway and EIP if its not exist
       ec2_vpc_nat_gateway:
-        state: "{{state}}"
+        state: absent
         subnet_id: "{{pubsub1_out.subnet.id}}"
         wait: yes
         region: "{{region}}"
@@ -139,4 +139,5 @@
           - dest: 0.0.0.0/0
             gateway_id: "{{NATGW_out.nat_gateway_id}}"
       register: privRT_out
+
 
