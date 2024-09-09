@@ -18,3 +18,8 @@ zone2: us-east-2b
 zone3: us-east-2c
 
 state: present
+
+# Bastion host variables
+bastion_ami: ami-09efc42336106d2f2
+region: us-east-2
+MYIP: 176.179.142.152/32
