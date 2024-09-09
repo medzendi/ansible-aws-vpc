@@ -139,7 +139,9 @@
           - dest: 0.0.0.0/0
             gateway_id: "{{NATGW_out.nat_gateway.id}}"
       register: privRT_out
-
+    - name: Debug NATGW_out output
+      debug:
+        var: NATGW_out
 
     - name: Print the all output variable
       debug:
