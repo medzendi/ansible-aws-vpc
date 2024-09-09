@@ -157,7 +157,7 @@
         - privsub3_out.subnet.id
         - igw_out.gateway_id
         - pubRT_out.route_table.id
-        - NATGW_out.nat_gateway.id
+        - NATGW_out.nat_gateway_id
         - privRT_out.route_table.id
 
     - name: Set fact variables to handle and use them
