@@ -34,7 +34,7 @@
       register: BastionSG_out
 
     - name: Creating Bastion Host
-      ec2:
+      amazon.aws.ec2:
         key_name: vprofile-key
         region: "{{region}}"
         instance_type: t2.micro
@@ -51,5 +51,5 @@
           Project: Vprofile
           Owner: DevOps_Team
         group_id: "{{BastionSG_out.group_id}}"
-        vpc_subnet_id: "{{pubsub1id}}"  # Removed extra dot here
+        vpc_subnet_id: "{{pubsub1id}}"
       register: bastionHost_out
