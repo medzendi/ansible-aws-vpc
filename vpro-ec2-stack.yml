@@ -38,6 +38,10 @@
             cidr_ip: 0.0.0.0/0
       register: vproELBSG_out
 
+    - name: print the output of vproELBSG
+      debug:
+        var: vproELBSG_out
+
     - name: Created Security Group for vprofile stack
       ec2_group:
         name: vproStack-sg
