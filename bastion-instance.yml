@@ -25,7 +25,7 @@
       when: key_out.changed
 
     - name: Create Security group for bastion host
-      ec2_group:
+      amazon.aws.ec2_group:
         name: Bastion-host-sg
         description: Allow port 22 from everywhere and all port within sg
         region: "{{region}}"
