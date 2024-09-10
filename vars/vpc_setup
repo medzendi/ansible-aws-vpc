@@ -22,4 +22,4 @@ state: present
 # Bastion host variables
 bastion_ami: ami-09efc42336106d2f2
 region: us-east-2
-MYIP: 176.179.147.176/32
+MYIP: 176.179.134.110/32
