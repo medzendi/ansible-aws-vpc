@@ -171,9 +171,9 @@
           - "{{pubsub2id}}"
           - "{{pubsub3id}}"
         listeners:
-          protocol: http
-          load_balancer_port: 80
-          instance_port: 80
+          - protocol: http
+            load_balancer_port: 80
+            instance_port: 80
 # create and insert/update host IP & name file
     - name: Insert/Update Hosts IP & Name in file provision-stack/group_vars/hostsip
       blockinfile:
