@@ -193,7 +193,7 @@
 # create and insert/update inventory file provision-stack/inventory-vpro
     - name: Insert/Update Inventory file provision-stack/inventory-vpro
       blockinfile:
-        path: ./provision-stack/group_vars/hostsip
+        path: ./provision-stack/inventory-vpro
         block: |
           web01 ansible_host={{web01_out.instances[0].private_ip_address}}
           app01 ansible_host={{app01_out.instances[0].private_ip_address}}
