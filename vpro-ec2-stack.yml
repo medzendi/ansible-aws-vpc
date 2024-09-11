@@ -76,16 +76,12 @@
         image_id: "{{nginx_ami}}"
         wait: yes
         wait_timeout: 300
-        instance_tags:
+        tags: # Use 'tags' instead of 'instance_tags'
           Name: "web01"
           Project: Vprofile
           Owner: DevOps Team
-        exact_count: 1
-        count_tag:
-          Name: "web01"
-          Project: Vprofile
-          Owner: DevOps Team
-        group_id: "{{vproStackSG_out.group_id}}"
+        exact_count: 1  # Use 'count' instead of 'count_tag'
+        security_group: "{{vproStackSG_out.group_id}}"  # Use 'security_group' instead of 'group_id'
         vpc_subnet_id: "{{privsub1id}}"
       register: web01_out
 # setup tomcat instance in subnet 1
@@ -97,16 +93,12 @@
         image_id: "{{tomcat_ami}}"
         wait: yes
         wait_timeout: 300
-        instance_tags:
+        tags: # Use 'tags' instead of 'instance_tags'
           Name: "app01"
           Project: Vprofile
           Owner: DevOps Team
-        exact_count: 1
-        count_tag:
-          Name: "app01"
-          Project: Vprofile
-          Onwer: DevOps Team
-        group_id: "{{vproStackSG_out.group_id}}"
+        exact_count: 1  # Use 'count' instead of 'count_tag'
+        security_group: "{{vproStackSG_out.group_id}}"  # Use 'security_group' instead of 'group_id'
         vpc_subnet_id: "{{privsub1id}}"
       register: app01_out
 # setup memcached instance in subnet 1
@@ -118,16 +110,12 @@
         image_id: "{{memcache_ami}}"
         wait: yes
         wait_timeout: 300
-        instance_tags:
+        tags:
           Name: "mc01"
           Project: Vprofile
           Owner: DevOps Team
         exact_count: 1
-        count_tag:
-          Name: "mc01"
-          Project: Vprofile
-          Onwer: DevOps Team
-        group_id: "{{vproStackSG_out.group_id}}"
+        security_group: "{{vproStackSG_out.group_id}}"
         vpc_subnet_id: "{{privsub1id}}"
       register: mc01_out
 # setup RabbitMQ instance in subnet 1
@@ -139,16 +127,12 @@
         image_id: "{{rmq_ami}}"
         wait: yes
         wait_timeout: 300
-        instance_tags:
+        tags:
           Name: "rmq01"
           Project: Vprofile
           Owner: DevOps Team
         exact_count: 1
-        count_tag:
-          Name: "rmq01"
-          Project: Vprofile
-          Onwer: DevOps Team
-        group_id: "{{vproStackSG_out.group_id}}"
+        security_group: "{{vproStackSG_out.group_id}}"
         vpc_subnet_id: "{{privsub1id}}"
       register: rmq01_out
 # setup MySQL instance in subnet 1
@@ -160,16 +144,12 @@
         image_id: "{{mysql_ami}}"
         wait: yes
         wait_timeout: 300
-        instance_tags:
+        tags:
           Name: "db01"
           Project: Vprofile
           Owner: DevOps Team
         exact_count: 1
-        count_tag:
-          Name: "db01"
-          Project: Vprofile
-          Onwer: DevOps Team
-        group_id: "{{vproStackSG_out.group_id}}"
+        security_group: "{{vproStackSG_out.group_id}}"
         vpc_subnet_id: "{{privsub1id}}"
       register: db01_out
 # Print the instance output to get the ssh key
