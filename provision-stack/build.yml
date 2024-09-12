@@ -1,5 +1,6 @@
-- name: Genrate artifact, copy artifact & sql file to files directory
-  host: localhost
+---
+- name: Generate artifact, copy artifact & sql file to files directory
+  hosts: localhost
   connection: local
   become: yes
   tasks:
