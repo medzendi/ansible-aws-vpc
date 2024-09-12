@@ -33,12 +33,12 @@
         dest: files/ROOT.war
       with_fileglob: Vprofile-repo/target/*.war
 
-    #- name: Copy SQL file to files directory
-    #  copy:
-    #    src: Vprofile-repo/src/main/resources/db_backup.sql
-    #    dest: files/db_backup.sql
+    - name: Copy SQL file to files directory
+      copy:
+        src: Vprofile-repo/src/main/resources/db_backup.sql
+        dest: files/db_backup.sql
     # - name: Copy artifacts to files directory
     #command: "cp Vprofile-repo/target/Vprofile-v2.war files"
 
-    - name: Copy SQL file to files directory
-      command: "cp Vprofile-repo/src/main/resources/db_backup.sql files"
+    #- name: Copy SQL file to files directory
+    #  command: "cp Vprofile-repo/src/main/resources/db_backup.sql files"
