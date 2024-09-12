@@ -1,0 +1,29 @@
+2024-09-12 19:43:09,182 p=18892 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts of all the instances in the stack] ******************************************************************************************************************
+2024-09-12 19:43:09,188 p=18892 u=ubuntu n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************
+2024-09-12 19:43:10,619 p=18892 u=ubuntu n=ansible | ok: [cntl]
+2024-09-12 19:43:10,679 p=18892 u=ubuntu n=ansible | ok: [web01]
+2024-09-12 19:43:10,875 p=18892 u=ubuntu n=ansible | ok: [app01]
+2024-09-12 19:43:10,895 p=18892 u=ubuntu n=ansible | ok: [mc01]
+2024-09-12 19:43:10,898 p=18892 u=ubuntu n=ansible | ok: [rmq01]
+2024-09-12 19:43:12,074 p=18892 u=ubuntu n=ansible | ok: [db01]
+2024-09-12 19:43:12,119 p=18892 u=ubuntu n=ansible | TASK [Import VPC setup Variable] ***************************************************************************************************************************************************************
+2024-09-12 19:43:12,142 p=18892 u=ubuntu n=ansible | ok: [cntl]
+2024-09-12 19:43:12,177 p=18892 u=ubuntu n=ansible | ok: [web01]
+2024-09-12 19:43:12,192 p=18892 u=ubuntu n=ansible | ok: [app01]
+2024-09-12 19:43:12,215 p=18892 u=ubuntu n=ansible | ok: [rmq01]
+2024-09-12 19:43:12,217 p=18892 u=ubuntu n=ansible | ok: [mc01]
+2024-09-12 19:43:12,224 p=18892 u=ubuntu n=ansible | ok: [db01]
+2024-09-12 19:43:12,231 p=18892 u=ubuntu n=ansible | TASK [Update hosts file for all the hosts] *****************************************************************************************************************************************************
+2024-09-12 19:43:12,864 p=18892 u=ubuntu n=ansible | ok: [web01]
+2024-09-12 19:43:12,870 p=18892 u=ubuntu n=ansible | ok: [mc01]
+2024-09-12 19:43:12,871 p=18892 u=ubuntu n=ansible | ok: [rmq01]
+2024-09-12 19:43:12,875 p=18892 u=ubuntu n=ansible | ok: [app01]
+2024-09-12 19:43:12,903 p=18892 u=ubuntu n=ansible | ok: [cntl]
+2024-09-12 19:43:13,158 p=18892 u=ubuntu n=ansible | ok: [db01]
+2024-09-12 19:43:13,244 p=18892 u=ubuntu n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************
+2024-09-12 19:43:13,244 p=18892 u=ubuntu n=ansible | app01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-12 19:43:13,245 p=18892 u=ubuntu n=ansible | cntl                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-12 19:43:13,245 p=18892 u=ubuntu n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-12 19:43:13,245 p=18892 u=ubuntu n=ansible | mc01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-12 19:43:13,245 p=18892 u=ubuntu n=ansible | rmq01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-12 19:43:13,245 p=18892 u=ubuntu n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
