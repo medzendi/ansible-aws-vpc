@@ -1,3 +1,4 @@
+region: us-east-2
 vpcid: vpc-01e2e8eba4261188d
 pubsub1id: subnet-02211d8c26b495af7
 pubsub2id: subnet-073453420bebcdcb0
@@ -7,7 +8,7 @@ privsub2id: subnet-0cca7d6155b1e2838
 privsub3id: subnet-0221edde83c3b7af7
 igwid: igw-0f6a484223f5d69dc
 pubRTid: rtb-0c2f89d057a378e0d
-NATGWid: nat-0ec3cbe30d13134d8
+NATGWid: nat-0d1b0298675ce9334
 privRTid: rtb-0e0f9730975a4f051
 # BEGIN ANSIBLE MANAGED BLOCK
 BastionSGid: sg-09ba36dc95c65cff6
