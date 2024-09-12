@@ -1,0 +1,3 @@
+[submodule "provision-stack/Vprofile-repo"]
+	path = provision-stack/Vprofile-repo
+	url = git@github.com:medzendi/ansible-aws-vpc.git
