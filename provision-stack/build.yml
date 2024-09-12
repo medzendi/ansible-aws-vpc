@@ -29,13 +29,13 @@
 
     - name: Copy artifacts to files directory
       copy:
-        scr: "{{item}}"
+        src: "{{item}}"
         dest: files/ROOT.war
       with_fileglob: Vprofile-repo/target/*.war
 
     - name: Copy SQL file to files directory
       copy:
-        scr: Vprofile-repo/src/main/resources/db_backup.sql
+        src: Vprofile-repo/src/main/resources/db_backup.sql
         dest: files/db_backup.sql
     # - name: Copy artifacts to files directory
     #command: "cp Vprofile-repo/target/Vprofile-v2.war files"
