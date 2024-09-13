@@ -11,7 +11,7 @@
         - deploy
     - name: Restoring DB
       mysql_db:
-        name: accounts
+        name: "{{dbname}}"
         login_user: "{{dbuser}}"
         login_password: "{{dbpass}}"
         state: import
@@ -20,4 +20,11 @@
         - Restart mysql
       tags:
         - deploy
+
+  handlers:
+    - name: Restart mysql
+      service:
+        name: mysql
+        state: restarted
+
 
