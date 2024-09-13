@@ -27,3 +27,78 @@
 2024-09-12 19:43:13,245 p=18892 u=ubuntu n=ansible | mc01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2024-09-12 19:43:13,245 p=18892 u=ubuntu n=ansible | rmq01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2024-09-12 19:43:13,245 p=18892 u=ubuntu n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-13 10:56:59,408 p=1823 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts of all the instances in the stack] ******************************************************************************************************************
+2024-09-13 10:56:59,418 p=1823 u=ubuntu n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************
+2024-09-13 10:57:01,461 p=1823 u=ubuntu n=ansible | ok: [cntl]
+2024-09-13 10:57:01,580 p=1823 u=ubuntu n=ansible | ok: [app01]
+2024-09-13 10:57:01,623 p=1823 u=ubuntu n=ansible | ok: [mc01]
+2024-09-13 10:57:01,694 p=1823 u=ubuntu n=ansible | ok: [rmq01]
+2024-09-13 10:57:01,808 p=1823 u=ubuntu n=ansible | ok: [web01]
+2024-09-13 10:57:03,615 p=1823 u=ubuntu n=ansible | ok: [db01]
+2024-09-13 10:57:03,671 p=1823 u=ubuntu n=ansible | TASK [Import VPC setup Variable] ***************************************************************************************************************************************************************
+2024-09-13 10:57:03,719 p=1823 u=ubuntu n=ansible | ok: [cntl]
+2024-09-13 10:57:03,742 p=1823 u=ubuntu n=ansible | ok: [web01]
+2024-09-13 10:57:03,762 p=1823 u=ubuntu n=ansible | ok: [app01]
+2024-09-13 10:57:03,782 p=1823 u=ubuntu n=ansible | ok: [rmq01]
+2024-09-13 10:57:03,783 p=1823 u=ubuntu n=ansible | ok: [mc01]
+2024-09-13 10:57:03,792 p=1823 u=ubuntu n=ansible | ok: [db01]
+2024-09-13 10:57:03,798 p=1823 u=ubuntu n=ansible | TASK [Update hosts file for all the hosts] *****************************************************************************************************************************************************
+2024-09-13 10:57:04,578 p=1823 u=ubuntu n=ansible | ok: [app01]
+2024-09-13 10:57:04,581 p=1823 u=ubuntu n=ansible | ok: [rmq01]
+2024-09-13 10:57:04,581 p=1823 u=ubuntu n=ansible | ok: [web01]
+2024-09-13 10:57:04,581 p=1823 u=ubuntu n=ansible | ok: [mc01]
+2024-09-13 10:57:04,685 p=1823 u=ubuntu n=ansible | ok: [cntl]
+2024-09-13 10:57:04,914 p=1823 u=ubuntu n=ansible | ok: [db01]
+2024-09-13 10:57:05,021 p=1823 u=ubuntu n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************
+2024-09-13 10:57:05,021 p=1823 u=ubuntu n=ansible | app01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-13 10:57:05,022 p=1823 u=ubuntu n=ansible | cntl                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-13 10:57:05,022 p=1823 u=ubuntu n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-13 10:57:05,022 p=1823 u=ubuntu n=ansible | mc01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-13 10:57:05,022 p=1823 u=ubuntu n=ansible | rmq01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-13 10:57:05,022 p=1823 u=ubuntu n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-13 10:57:51,035 p=2079 u=ubuntu n=ansible | PLAY [Generate artifact, copy artifact & sql file to files directory] **************************************************************************************************************************
+2024-09-13 10:57:51,043 p=2079 u=ubuntu n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************
+2024-09-13 10:57:52,258 p=2079 u=ubuntu n=ansible | ok: [localhost]
+2024-09-13 10:57:52,273 p=2079 u=ubuntu n=ansible | TASK [Install jdk, maven, git] *****************************************************************************************************************************************************************
+2024-09-13 10:58:00,731 p=2079 u=ubuntu n=ansible | ok: [localhost] => (item=git)
+2024-09-13 10:58:03,264 p=2079 u=ubuntu n=ansible | ok: [localhost] => (item=openjdk-8-jdk)
+2024-09-13 10:58:05,590 p=2079 u=ubuntu n=ansible | ok: [localhost] => (item=maven)
+2024-09-13 10:58:05,599 p=2079 u=ubuntu n=ansible | TASK [Clone source code from github] ***********************************************************************************************************************************************************
+2024-09-13 10:59:00,836 p=2079 u=ubuntu n=ansible | changed: [localhost]
+2024-09-13 10:59:00,844 p=2079 u=ubuntu n=ansible | TASK [mvn install command to build artifact] ***************************************************************************************************************************************************
+2024-09-13 10:59:24,943 p=2079 u=ubuntu n=ansible | changed: [localhost]
+2024-09-13 10:59:24,957 p=2079 u=ubuntu n=ansible | TASK [Copy artifacts to files directory] *******************************************************************************************************************************************************
+2024-09-13 10:59:26,946 p=2079 u=ubuntu n=ansible | changed: [localhost] => (item=/home/ubuntu/ansible-aws-vpc/provision-stack/Vprofile-repo/target/vprofile-v2.war)
+2024-09-13 10:59:26,953 p=2079 u=ubuntu n=ansible | TASK [Copy SQL file to files directory] ********************************************************************************************************************************************************
+2024-09-13 10:59:27,496 p=2079 u=ubuntu n=ansible | changed: [localhost]
+2024-09-13 10:59:27,516 p=2079 u=ubuntu n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************
+2024-09-13 10:59:27,516 p=2079 u=ubuntu n=ansible | localhost                  : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-13 10:59:41,440 p=3446 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts of all the instances in the stack] ******************************************************************************************************************
+2024-09-13 10:59:41,459 p=3446 u=ubuntu n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************
+2024-09-13 10:59:43,398 p=3446 u=ubuntu n=ansible | ok: [app01]
+2024-09-13 10:59:43,404 p=3446 u=ubuntu n=ansible | ok: [web01]
+2024-09-13 10:59:43,408 p=3446 u=ubuntu n=ansible | ok: [rmq01]
+2024-09-13 10:59:43,420 p=3446 u=ubuntu n=ansible | ok: [mc01]
+2024-09-13 10:59:44,521 p=3446 u=ubuntu n=ansible | ok: [cntl]
+2024-09-13 10:59:44,927 p=3446 u=ubuntu n=ansible | ok: [db01]
+2024-09-13 10:59:44,984 p=3446 u=ubuntu n=ansible | TASK [Import VPC setup Variable] ***************************************************************************************************************************************************************
+2024-09-13 10:59:45,029 p=3446 u=ubuntu n=ansible | ok: [cntl]
+2024-09-13 10:59:45,049 p=3446 u=ubuntu n=ansible | ok: [web01]
+2024-09-13 10:59:45,070 p=3446 u=ubuntu n=ansible | ok: [app01]
+2024-09-13 10:59:45,090 p=3446 u=ubuntu n=ansible | ok: [rmq01]
+2024-09-13 10:59:45,091 p=3446 u=ubuntu n=ansible | ok: [mc01]
+2024-09-13 10:59:45,100 p=3446 u=ubuntu n=ansible | ok: [db01]
+2024-09-13 10:59:45,106 p=3446 u=ubuntu n=ansible | TASK [Update hosts file for all the hosts] *****************************************************************************************************************************************************
+2024-09-13 10:59:45,891 p=3446 u=ubuntu n=ansible | ok: [web01]
+2024-09-13 10:59:45,894 p=3446 u=ubuntu n=ansible | ok: [mc01]
+2024-09-13 10:59:45,894 p=3446 u=ubuntu n=ansible | ok: [rmq01]
+2024-09-13 10:59:45,896 p=3446 u=ubuntu n=ansible | ok: [app01]
+2024-09-13 10:59:46,002 p=3446 u=ubuntu n=ansible | ok: [cntl]
+2024-09-13 10:59:46,231 p=3446 u=ubuntu n=ansible | ok: [db01]
+2024-09-13 10:59:46,334 p=3446 u=ubuntu n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************
+2024-09-13 10:59:46,335 p=3446 u=ubuntu n=ansible | app01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-13 10:59:46,335 p=3446 u=ubuntu n=ansible | cntl                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-13 10:59:46,335 p=3446 u=ubuntu n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-13 10:59:46,336 p=3446 u=ubuntu n=ansible | mc01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-13 10:59:46,336 p=3446 u=ubuntu n=ansible | rmq01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-09-13 10:59:46,336 p=3446 u=ubuntu n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
